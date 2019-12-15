@@ -1,0 +1,26 @@
+//- nav.pug
+
+div.nav-container
+  nav.navbar.navbar-expand-lg.navbar-light.bg-light
+
+    a(href='/').navbar-brand
+      img(src='./images/logo/logo.jpg').nav-logo
+
+    button(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation').navbar-toggler
+      span.navbar-toggler-icon
+
+    div(id='navbarSupportedContent').collapse.navbar-collapse
+      ul.navbar-nav.mr-auto
+        li.nav-item
+          a(href='/').nav-link home
+
+      ul.navbar-nav.ml-auto.nav-social
+        li.nav-item
+          a(href='/').nav-link
+            i.fab.fa-facebook-f
+        li.nav-item
+          a(href='/').nav-link
+            i.fab.fa-instagram
+        li.nav-item
+          a(href='/').nav-link
+            i.fa.fa-envelope
