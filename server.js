@@ -6,7 +6,7 @@ const
 	evalidator = require('email-validator'),
 	mailer = require('sendmail')(),
 	bcrypt = require('bcrypt'),
-	session = require('express-session'),
+	express_session = require('express-session'),
 	db = require('./db/config.js'),
 	multipart = require('connect-multiparty');
 
@@ -20,11 +20,29 @@ const multipartMiddleware = multipart();
 // app instance
 const app = express();
 
+const session = express_session({
+	secret: '5upe7s3c7et53s510nk3y',
+	resave: false,
+	saveUninitialized: false
+});
+
+const session_middleware = (req, res, next) => {
+	req.session.user_ip = req.ip;
+	req.session.last_access = Date.now();
+  next();
+}
+
+const isAdmin = (req, res, next) => {
+	if (req.session.user && req.session.user.admin) next();
+	else res.json({failure: 1});
+}
+
 app.set("view engine", "pug");
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true }));
-
+app.use(session);
+app.use(session_middleware);
 
 // sesh stuff
 app.use(

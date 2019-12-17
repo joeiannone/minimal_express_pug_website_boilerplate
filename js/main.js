@@ -1,8 +1,6 @@
 // main.js
 $(document).ready(function() {
 
-  $('#footer-copy').html(`Sannino Productions &copy; ${dt.getFullYear()}`);
-
   if ($('#login-form').length) {
 
     $('#login-form').submit(function(e) {
