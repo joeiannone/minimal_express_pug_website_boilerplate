@@ -1,73 +1,23 @@
 {
-  "name": "boilerplate_site",
+  "name": "minimal_express_pug_website_boilerplate",
   "version": "1.0.0",
-  "description": "boilerplate express/pug/mongo site",
+  "description": "A minimal boilerplate for an express website using pug template engine",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon --watch server.js; ",
-    "start": "node ./server.js",
-    "prod-build-watch": "nohup gulp watch minifyjs minifycss image",
-    "dev-build": "gulp watch minifyjs minifycss image sass libraries",
-    "build": "gulp minifyjs minifycss image",
-    "webpack-test-build": "webpack --config webpack.config.js"
+    "start-dev": "nodemon --watch server.js; ",
+    "start": "node ./server.js"
   },
   "author": "Joe Iannone",
   "license": "ISC",
   "dependencies": {
-    "assert": "^1.5.0",
-    "bcrypt": "^3.0.7",
-    "body-parser": "^1.19.0",
-    "bootstrap": "^4.3.1",
-    "connect-multiparty": "^2.2.0",
-    "cors": "^2.8.5",
-    "email-validator": "^1.2.3",
     "express": "^4.17.1",
-    "express-fileupload": "^1.1.6",
-    "express-session": "^1.17.0",
-    "file-system": "^2.2.2",
-    "https": "^1.0.0",
-    "jquery": "^3.4.1",
-    "mongoose": "^5.8.1",
-    "popper.js": "^1.16.0",
-    "pug": "^2.0.4",
-    "sendmail": "^1.6.1",
-    "vue": "^2.6.10"
+    "pug": "^2.0.4"
   },
   "devDependencies": {
-    "@babel/core": "^7.6.4",
-    "@babel/preset-env": "^7.6.3",
-    "@fortawesome/fontawesome-free": "^5.11.2",
-    "autoprefixer": "^9.6.5",
-    "babel-loader": "^8.0.6",
-    "css-loader": "^3.2.0",
-    "cssnano": "^4.1.10",
-    "file-loader": "^4.2.0",
-    "gulp": "^4.0.2",
-    "gulp-clean-css": "^4.2.0",
-    "gulp-cli": "^2.2.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-fontmin": "^0.7.4",
-    "gulp-image": "^5.1.0",
-    "gulp-minify": "^3.1.0",
-    "gulp-sass": "^4.0.2",
-    "mini-css-extract-plugin": "^0.8.0",
-    "node-sass": "^4.13.0",
-    "nodemon": "^1.19.0",
-    "postcss-loader": "^3.0.0",
-    "sass": "^1.23.0",
-    "sass-loader": "^8.0.0",
-    "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.9"
+    "nodemon": "^2.0.4"
   },
   "repository": {
     "type": "git",
     "url": ""
-  },
-  "keywords": [
-    "Website",
-  ],
-  "bugs": {
-    "url": ""
-  },
-  "homepage": ""
+  }
 }

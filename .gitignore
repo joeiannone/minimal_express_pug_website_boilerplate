@@ -1,7 +1,4 @@
 .DS_Store
 /node_modules/
-static/*
-public/*
-images/*
 nohup.out
 favicon.ico
