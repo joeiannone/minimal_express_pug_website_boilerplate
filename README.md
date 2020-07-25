@@ -1,15 +1,3 @@
-# express-pug-mongo-boilerplate
+# minimal_express_pug_website_boilerplate
 
-## A boilerplate for building an express website
-
-This project is meant to help you hit the ground running when building a nodejs website.
-
-#### Included:
-* expressjs
-* pug
-* mongodb (via mongoose)
-* jquery
-* sass
-* bootstrap
-* fontawesome
-* gulp
+## A minimal boilerplate for building an express website with pug template engine.
